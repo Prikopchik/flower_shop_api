@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'flower_shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'flower_shop_db',           # Название БД
-        'USER': 'postgres',                 # Имя пользователя PostgreSQL
-        'PASSWORD': 'your_password',        # Пароль пользователя PostgreSQL
-        'HOST': 'localhost',                # Адрес сервера БД
-        'PORT': '5432',                     # Порт PostgreSQL
+        'NAME': 'flower_shop_db',           
+        'USER': 'postgres',                 
+        'PASSWORD': 'your_password',        
+        'HOST': 'localhost',                
+        'PORT': '5432',                     
     }
 }
 

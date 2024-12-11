@@ -1,18 +1,31 @@
 from rest_framework import viewsets
-from .models import Flower, Customer, Order
-from .serializers import FlowerSerializer, CustomerSerializer, OrderSerializer
+from .models import Customer, Supplier, Flower, Order, OrderDetail
+from .serializers import (
+    CustomerSerializer, SupplierSerializer, FlowerSerializer, 
+    OrderSerializer, OrderDetailSerializer
+)
 
-# ViewSet для цветов
-class FlowerViewSet(viewsets.ModelViewSet):
-    queryset = Flower.objects.all()
-    serializer_class = FlowerSerializer
-
-# ViewSet для клиентов
+# Customer ViewSet
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
-# ViewSet для заказов
+# Supplier ViewSet
+class SupplierViewSet(viewsets.ModelViewSet):
+    queryset = Supplier.objects.all()
+    serializer_class = SupplierSerializer
+
+# Flower ViewSet
+class FlowerViewSet(viewsets.ModelViewSet):
+    queryset = Flower.objects.all()
+    serializer_class = FlowerSerializer
+
+# Order ViewSet
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+
+# OrderDetail ViewSet
+class OrderDetailViewSet(viewsets.ModelViewSet):
+    queryset = OrderDetail.objects.all()
+    serializer_class = OrderDetailSerializer
